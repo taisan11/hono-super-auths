@@ -1,11 +1,4 @@
-To install dependencies:
-```sh
-bun install
-```
+## hono-super-auth
+authについて学ぶ
+### 参考
 
-To run:
-```sh
-bun run dev
-```
-
-open http://localhost:3000

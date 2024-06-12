@@ -1,14 +1,25 @@
 {
   "scripts": {
     "dev": "bun run --hot src/index.ts",
-    "format":"biome format --write ./src",
-    "lint": "biome lint ./src"
+    "format": "biome format --write ./src",
+    "lint": "biome lint ./src",
+    "drizzle-kit": "drizzle-kit",
+    "db:init": "rm -rf ./drizzle/ sqlite.db && bun run db:generato && bun run db:migrate && bun run db:genseed",
+    "db:generato": "drizzle-kit generate",
+    "db:migrate": "bun run ./script/migrate.ts",
+    "db:genseed": "bun run ./script/seed.ts"
   },
   "dependencies": {
-    "hono": "^4.4.2"
+    "@jcs224/hono-sessions": "npm:@jsr/jcs224__hono-sessions",
+    "drizzle-orm": "^0.31.2",
+    "hono": "^4.4.4",
+    "nanoid": "^5.0.7",
+    "nodemailer": "^6.9.13"
   },
   "devDependencies": {
     "@biomejs/biome": "1.8.0",
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "@types/nodemailer": "^6.4.15",
+    "drizzle-kit": "^0.22.7"
   }
 }
