@@ -12,7 +12,7 @@
   "dependencies": {
     "@jcs224/hono-sessions": "npm:@jsr/jcs224__hono-sessions",
     "drizzle-orm": "^0.31.2",
-    "hono": "^4.4.4",
+    "hono": "^4.4.6",
     "nanoid": "^5.0.7",
     "nodemailer": "^6.9.13"
   },
