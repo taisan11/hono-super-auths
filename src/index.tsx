@@ -56,7 +56,7 @@ app.onError(async (e,c) => {
       <h1>エラーが発生しました</h1>
       <p>以下の文章を管理者に送り付けてください</p>
       <textarea readonly cols={35} rows={5} style="font-size: 130%">TITLE:{e.name}\nVELUE:{e.message}\nURL:{c.req.url}</textarea>
-    </div>,{title: "エラー | YSNETS"}
+    </div>,{title: "エラー"}
   )
 })
 app.notFound(async (c) => {
@@ -64,7 +64,7 @@ app.notFound(async (c) => {
     <div style="text-align:  center;">
       <h1>404 Not Found</h1>
       <p>ページがないよ</p>
-    </div>,{title: "ページがないよ | YSNETS"}
+    </div>,{title: "ページがないよ"}
   )
 })
 
